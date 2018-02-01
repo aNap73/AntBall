@@ -4,6 +4,14 @@ var balldeltalft=1;
 var balldeltatp=1;
 var scrnheight=280;
 var scrnwidth=640;
+var mousex=0;
+var mousey=0;
+var event = window.event;
+function handlemouse(event)
+{
+  mousex=event.clientX;
+  mousey=event.clientY;
+}
 function StartBall ()
 {
   Step();
@@ -12,8 +20,10 @@ function StartBall ()
 }
 function Step()
 {
+
   BallAI();
-  
+  var score=document.getElementById("score");
+  score.innerHTML="mouse y: " + mousey;
 
 }
 function BallAI()
