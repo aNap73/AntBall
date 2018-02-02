@@ -103,10 +103,21 @@ body{
   z-index: 100;
 }
 .instruct{
-  padding-top: 10px;
-  padding-right:10px;
+  background-color: yellowgreen;
+  padding: 5px 8px;
+  border-radius: 34px;
+  margin: 10px;
   float: right;
- 
+  font-size: .8em;
+  box-shadow: 2px 2px 2px black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.instruct:hover{
+  background-color: rgb(220, 255, 151);
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 .switch {
   top:8px;
