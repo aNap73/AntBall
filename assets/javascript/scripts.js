@@ -1,4 +1,3 @@
-
 //AntBall by: A.Napolitano 2/2/2018
 var balllft=20;
 var balltp=20;
@@ -26,7 +25,6 @@ function handlemouse(event)
   
   mousex=event.clientX;
   mousey=event.clientY;
-  //mousey=event.offsetHeight;
   if (mousey<461)
   {
   paddle1y=(mousey-230);}
