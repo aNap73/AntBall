@@ -62,6 +62,24 @@ body{
   width:10px;
   z-index: 100;
 }
+#paddle1 {
+  position: absolute;
+  Top: 115px;
+  Left: 20px;
+  background-color: #000;
+  height: 50px;
+  width:10px;
+  z-index: 100;
+}
+#paddle2 {
+  position: absolute;
+  Top: 115px;
+  Left: 620px;
+  background-color: #000;
+  height: 50px;
+  width:10px;
+  z-index: 100;
+}
 /*
 <div class="gamecontain">
 <div class="paddle" id="PlayerPaddle">      
