@@ -4,7 +4,7 @@ body{
   background-color: #000;
 }
 .titlebar {
-  background-color:#000;
+  background-color: green;
   border-bottom: 2px solid greenyellow;
 }
 .titlecontain {
@@ -19,6 +19,18 @@ body{
                3px 3px rgb(252, 255, 47);
   padding: 10px; 
 }
+.mnuAutoPlayer{
+  margin-left:10px;
+  font-family: Impact, Charcoal, sans-serif;  
+  font-size: 2em;
+  font-weight: 600;  
+  color: black;
+  text-shadow: 1px 1px greenyellow,
+               2px 2px rgb(193, 255, 47),               
+               3px 3px rgb(252, 255, 47);
+  
+}
+
 .titlecontain h1 {
   font-size: 6em;
 }
@@ -36,6 +48,15 @@ body{
   margin: 0 auto;
   background-color: greenyellow;
 }
+.controlbox {  
+  position: relative;
+  
+  width: 640px;
+  height: 50px;
+  margin: 0px auto;
+  background-color: green;
+
+}
 .centerline {
   height:100%;
   width: 0;
@@ -47,6 +68,7 @@ body{
   padding: 12px;
 
 }
+
 #score {
   float: left;
 }
@@ -79,6 +101,70 @@ body{
   height: 50px;
   width:10px;
   z-index: 100;
+}
+.instruct{
+  padding-top: 10px;
+  padding-right:10px;
+  float: right;
+ 
+}
+.switch {
+  top:8px;
+  left:10px;
+  margin: 3px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color:black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: greenyellow;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px greenyellow;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 /*
 <div class="gamecontain">

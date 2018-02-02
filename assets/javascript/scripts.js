@@ -9,13 +9,16 @@ var paddle1x=20;
 var paddle1y=100;
 var mousex=0;
 var mousey=0;
-var myscore=0;
+var myscore=-1000;
 var mylives=3;
 var event = window.event;
 var bGameOver = false;
 var gameinterval;
 var paddletrigger = .9;
 var aipaddlespeed = 2;
+var AutoPlayerOn = false;
+
+var cnt=0;
 function handlemouse(event)
 {
   mousex=event.clientX;
@@ -24,16 +27,28 @@ function handlemouse(event)
   {
   paddle1y=(mousey-220);}
 }
+function AutoPlayerTog()
+{
+  if(AutoPlayerOn===true)
+  {
+    AutoPlayerOn=false;
+  }
+  else
+  {
+    AutoPlayerOn=true;
+  }
+}
 function StartBall ()
 {
   Step();
- 
+  score();
   gameinterval = window.setInterval(Step,1);
   
 }
 function Step()
-
 {
+  cnt +=1;
+  
   if(bGameOver)
   {
     clearInterval(gameinterval);
@@ -50,10 +65,13 @@ function Step()
 
 }
 function PlayerMove()
-{
+{ 
   var Pad1 = document.getElementById("paddle1");    
   Pad1.style = "left: " + paddle1x + "px; top: " + paddle1y + "px;";
 
+  if (AutoPlayerOn)
+  {Pad1.style = "left: " + paddle1x + "px; top: " + (balltp -25)  + "px;";}
+  
 }
 function Paddle2AI()
 {
@@ -80,6 +98,8 @@ function BallAI()
     }else{
         die();
     }
+    ColisionCoolDown = true;
+    
   }
   if(balltp >= scrnheight | balltp < 0 )
   {
@@ -93,12 +113,11 @@ function BallAI()
   if (bCollide(Pad1,Ball))
   {
     balldeltalft *= -1;
-    //balldeltatp *= -1;
+       
   }
-  if (bCollide(Pad2,Ball))
-  {
+  if (bCollide(Pad2,Ball))  {
     balldeltalft *= -1;
-    //balldeltatp *= -1;
+      
   }
 
   balllft += balldeltalft * ballspeed;
@@ -107,8 +126,7 @@ function BallAI()
   
     
   Ball.style = "left: " + balllft + "px; top: " + balltp + "px;";
-  //Ball.style.left = balllft;
-  //Ball.style.top = balltp;
+
 }
 function score(){
   myscore = myscore + 1000;
@@ -116,27 +134,27 @@ function score(){
   {
     if (myscore>5000)
     {
-      aipaddlespeed = 3;
-      paddletrigger = .7; 
-      ballspeed *= 1.05;
-    }else
+      aipaddlespeed = 2;
+      paddletrigger = .8; 
+      ballspeed = 1;
+    }
     if (myscore>10000)
     {
-      aipaddlespeed = 10;
-      paddletrigger = .5;
-      ballspeed *= 1.05;
-    }else
+      aipaddlespeed = 2.8;
+      paddletrigger = .7;
+      ballspeed = 2;
+    }
     if (myscore>15000)
     {
-      aipaddlespeed =15;
-      paddletrigger = 0;
-      ballspeed *= 1.05;
-    }else
+      aipaddlespeed =2.8;
+      paddletrigger = .6;
+      ballspeed = 3;
+    }
     if (myscore>30000)
     {
-      aipaddlespeed =20;
-      paddletrigger = 0;
-      ballspeed *= 1.05;
+      aipaddlespeed =3;
+      paddletrigger = .5;
+      ballspeed = 4;
     }
   }
 }
@@ -152,9 +170,21 @@ function gameover(){
 }
 function bCollide(obj1,obj2)
 {
+  
+  
+  if(balllft>320) {
+    if(balldeltalft <0){
+      return false;
+    }
+  }
+  else{
+    if(balldeltalft >=0){
+      return false;
+    }
+  }
   var ret = false;
- 
-
+  
+  
 
   var obj1top = +obj1.style.top.replace("px","");  
   var obj1bottom = obj1top + +obj1.clientHeight;
