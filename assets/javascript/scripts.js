@@ -1,6 +1,6 @@
 //AntBall by: A.Napolitano 2/2/2018
 //Scripty!
-//
+//and Nifty!
 var balllft=20;
 var balltp=20;
 var ballspeed=1;
