@@ -1,4 +1,5 @@
 //AntBall by: A.Napolitano 2/2/2018
+//Scripty!
 //
 var balllft=20;
 var balltp=20;
