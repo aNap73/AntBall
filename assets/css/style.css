@@ -200,14 +200,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-/*
-<div class="gamecontain">
-<div class="paddle" id="PlayerPaddle">      
-</div>
-<div class ="paddle" id="AIPaddle">
-</div>
-<div class ="ball" id="AIBall">      
-</div>
-<div class="centerline"></div>
-<div class="score"></div>
-<div class="lives"></div>
+
