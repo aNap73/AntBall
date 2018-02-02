@@ -15,6 +15,7 @@ var event = window.event;
 var bGameOver = false;
 var gameinterval;
 var paddletrigger = .9;
+var aipaddlespeed = 2;
 function handlemouse(event)
 {
   mousex=event.clientX;
@@ -62,9 +63,9 @@ function Paddle2AI()
   var TopPad = +Pad1.style.top.replace("px","");
   if(Math.random() > paddletrigger){
     if((TopPad+25)<TopBall){
-       TopPad += 2; 
+       TopPad += aipaddlespeed; 
     }else
-    { TopPad -=2;}}
+    { TopPad -=aipaddlespeed;}}
 
   Pad1.style = "left: 610px; top: " + TopPad + "px;";
 }
@@ -115,21 +116,25 @@ function score(){
   {
     if (myscore>5000)
     {
-      paddletrigger = .8; 
+      aipaddlespeed = 3;
+      paddletrigger = .7; 
       ballspeed *= 1.05;
     }else
     if (myscore>10000)
     {
-      paddletrigger = .6;
+      aipaddlespeed = 10;
+      paddletrigger = .5;
       ballspeed *= 1.05;
     }else
     if (myscore>15000)
     {
-      paddletrigger = .2;
+      aipaddlespeed =15;
+      paddletrigger = 0;
       ballspeed *= 1.05;
     }else
     if (myscore>30000)
     {
+      aipaddlespeed =20;
       paddletrigger = 0;
       ballspeed *= 1.05;
     }
