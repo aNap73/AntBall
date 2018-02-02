@@ -6,24 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>© AntBall 2/2/2018</title>
   <link rel="stylesheet" href="./assets/css/reset.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Audiowide|Monoton|Orbitron" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 <body onload="StartBall()">
 <div class="maincontain">  
-  <div class="titlebar"> 
-  <div class="titlecontain">      
-      <h1>AntBall</h1>
-      <p>© Copyright Anthony Napolitano 2018</p>
-      
-  </div>
-  
-</div>
+
 
   <div class="gamehead">
       <div class="gameheadertext" id="score">0 pts</div>
       <div class="gameheadertext" id="lives">3 lives</div>
   </div>
+  
   <div class="gamecontain" onmousemove="handlemouse(event)">
+      <div class="titlecontain">      
+          <h1>AntBall</h1>
+          <p>© Copyright Anthony Napolitano 2018</p>    
+      </div>
      <div class="centerline"></div>
       <div class="paddle" id="paddle1"></div>
       <div class ="paddle" id="paddle2"></div>
