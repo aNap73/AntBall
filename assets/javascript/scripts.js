@@ -23,11 +23,14 @@ var AutoPlayerOn = false;
 var cnt=0;
 function handlemouse(event)
 {
+  
   mousex=event.clientX;
   mousey=event.clientY;
+  //mousey=event.offsetHeight;
   if (mousey<461)
   {
-  paddle1y=(mousey-220);}
+  paddle1y=(mousey-230);}
+  
 }
 function AutoPlayerTog()
 {
