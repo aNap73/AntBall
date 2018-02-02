@@ -26,6 +26,7 @@ body{
   padding: 10px; 
 
 }
+
 .centerline {
   
   position: absolute;
@@ -52,6 +53,14 @@ body{
   font-size: 4.5em;
   
 }
+
+.gamecontain {
+  position: relative;
+  width: 640px;
+  height: 280px;
+  margin: 0 auto;
+  background-color: greenyellow;
+}
 .gamehead {
   position: relative;
   width: 640px;
@@ -59,12 +68,15 @@ body{
   margin: 50px auto 0px auto;
   background-color: green;
 }
-.gamecontain {
-  position: relative;
-  width: 640px;
-  height: 280px;
-  margin: 0 auto;
-  background-color: greenyellow;
+.gameheadertext {
+  font-size: 1.8em;
+  font-weight: 300;
+  padding: 12px;
+  color: black;
+  text-shadow: 1px 1px greenyellow,
+               2px 2px rgb(193, 255, 47),               
+               3px 3px rgb(252, 255, 47);
+
 }
 .controlbox {  
   position: relative;
@@ -76,11 +88,7 @@ body{
 
 }
 
-.gameheadertext{
-  font-size: 1.3em;
-  padding: 12px;
 
-}
 
 #score {
   float: left;
