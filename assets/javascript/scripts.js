@@ -26,9 +26,7 @@ function handlemouse(event)
   
   mousex=event.clientX;
   mousey=event.clientY;
-  //99 378
- /// var score=document.getElementById("score");
- // score.innerHTML="mousey: " + mousey;
+
   if (mousey<=378&&mousey>=99)
   {
   paddle1y=(mousey-(378/3));}
