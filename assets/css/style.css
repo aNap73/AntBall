@@ -68,7 +68,7 @@ body{
 .gamecontain {
   position: relative;
   width: 640px;
-  height: 280px;
+  height: 180px;
   margin: 0 auto;
   background-color: greenyellow;
 }
