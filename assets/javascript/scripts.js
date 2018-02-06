@@ -28,7 +28,23 @@ var xDown = null;
 var yDown = null;                         
 gamecontain.addEventListener('touchstart', handleTouchStart, false);        
 gamecontain.addEventListener('touchmove', handleTouchMove, false);                               
-
+function isMobile ()
+{
+  var ret=false;
+if (navigator.userAgent.match(/Android/i) ||
+navigator.userAgent.match(/webOS/i) ||
+navigator.userAgent.match(/iPhone/i) ||
+navigator.userAgent.match(/iPad/i) ||
+navigator.userAgent.match(/iPod/i) ||
+navigator.userAgent.match(/BlackBerry/) || 
+navigator.userAgent.match(/Windows Phone/i) || 
+navigator.userAgent.match(/ZuneWP7/i)
+) {
+   // some code
+   ret=true;
+  }
+  return ret;
+}
 function handleTouchStart(evt) {                                         
     mousex = evt.touches[0].clientX;                                      
     mousey = evt.touches[0].clientY;                                      
@@ -48,10 +64,14 @@ function handlemouse(event)
   mousex=event.clientX;
   mousey=event.clientY;
   
-
+  if (isMobile)
+  {
+    paddle1y=(mousey)
+  }
+  else {
   if (mousey<=378&&mousey>=99)
   {
-  paddle1y=(mousey-(378/3));}
+  paddle1y=(mousey-(378/3));}}
   
 }
 function AutoPlayerTog()
