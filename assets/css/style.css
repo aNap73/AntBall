@@ -8,6 +8,7 @@ body{
 }
 .maincontain {
  position: absolute; 
+ width: 100%;
 }
 .titlebar {
   background-color: green; 
