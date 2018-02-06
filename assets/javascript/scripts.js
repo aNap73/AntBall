@@ -71,7 +71,7 @@ function handlemouse(event)
   
 
   if (isMobile()&&isLandscape()){
-    paddle1y=(mousey-41);
+    paddle1y=(mousey-31);
   }
   else
   {
