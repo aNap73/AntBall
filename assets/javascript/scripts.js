@@ -26,8 +26,8 @@ var cnt=0;
 
 var xDown = null;                                                        
 var yDown = null;                         
-document.addEventListener('touchstart', handleTouchStart, false);        
-document.addEventListener('touchmove', handleTouchMove, false);                               
+gamecontain.addEventListener('touchstart', handleTouchStart, false);        
+gamecontain.addEventListener('touchmove', handleTouchMove, false);                               
 
 function handleTouchStart(evt) {                                         
     mousex = evt.touches[0].clientX;                                      
