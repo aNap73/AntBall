@@ -9,7 +9,13 @@ body{
 }
 .maincontain {
  position: absolute; 
- width: 100%;
+ height: auto; 
+ width: auto;
+ top: 0; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+   
 }
 .titlebar {
   background-color: green; 
@@ -206,3 +212,9 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+@media screen and (max-width:993px){
+  .maincontain {
+    top: 0;
+    left: 0;
+  }
+}
