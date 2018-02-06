@@ -69,14 +69,16 @@ function handlemouse(event)
   mousey=event.clientY;
   
   
-  if (mousey<=378&&mousey>=99)
-  {
-    paddle1y=(mousey-(126));
-   
-    
-  }
+
   if (isMobile()&&isLandscape()){
-    paddle1y=(mousey);
+    paddle1y=(mousey+126);
+  }
+  else
+  {
+    if (mousey<=378&&mousey>=99)
+    {
+      paddle1y=(mousey-(126));
+    }
   }
   
 }
