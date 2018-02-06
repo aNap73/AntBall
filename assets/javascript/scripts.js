@@ -65,13 +65,13 @@ function handleTouchMove(evt) {
 function handlemouse(event)
 {
   
-  mousex=event.clientX;
-  mousey=event.clientY;
+  mousex= +event.clientX;
+  mousey= +event.clientY;
   
   
 
   if (isMobile()&&isLandscape()){
-    paddle1y=(mousey);
+    paddle1y=(mousey-160);
   }
   else
   {
