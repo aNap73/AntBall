@@ -71,7 +71,7 @@ function handlemouse(event)
   
 
   if (isMobile()&&isLandscape()){
-    paddle1y=(mousey-(146));
+    paddle1y=(mousey-106);
   }
   else
   {
@@ -80,10 +80,11 @@ function handlemouse(event)
       paddle1y=(mousey-(126));
     }
   }
-  paddle1y=(mousey-60);
+  
+
   
   var score=document.getElementById("score");
-  score.innerHTML="mousey: " + mousey;
+  score.innerHTML="paddle1y: " + paddle1y;
 }
 function AutoPlayerTog()
 {
