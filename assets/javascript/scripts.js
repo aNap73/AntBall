@@ -27,7 +27,10 @@ var cnt=0;
 var xDown = null;                                                        
 var yDown = null;                         
 gamecontain.addEventListener('touchstart', handleTouchStart, false);        
-gamecontain.addEventListener('touchmove', handleTouchMove, false);                               
+gamecontain.addEventListener('touchmove', handleTouchMove, false);  
+function isLandscape() {
+  return (window.orientation === 90 || window.orientation === -90);
+}                             
 function isMobile ()
 {
   var ret=false;
@@ -64,14 +67,15 @@ function handlemouse(event)
   mousex=event.clientX;
   mousey=event.clientY;
   
-  if (isMobile)
-  {
-    paddle1y=(mousey)
-  }
-  else {
+  
   if (mousey<=378&&mousey>=99)
   {
-  paddle1y=(mousey-(378/3));}}
+    paddle1y=(mousey-(378/3));
+    if (isMobile()&&isLandscape()){
+      paddle1y=(mousey);
+    }
+    
+  }
   
 }
 function AutoPlayerTog()
