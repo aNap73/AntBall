@@ -70,8 +70,8 @@ function handlemouse(event)
   
   
 
-  /*if (isMobile()&&isLandscape()){
-    paddle1y=(mousey-(126));
+  if (isMobile()&&isLandscape()){
+    paddle1y=(mousey-(146));
   }
   else
   {
@@ -79,8 +79,8 @@ function handlemouse(event)
     {
       paddle1y=(mousey-(126));
     }
-  }*/
-  paddle1y=(mousey-(126));
+  }
+  
   
   var score=document.getElementById("score");
   score.innerHTML="mousey: " + mousey;
