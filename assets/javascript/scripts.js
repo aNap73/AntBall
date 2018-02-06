@@ -75,7 +75,7 @@ function handlemouse(event)
     
   }
   if (isMobile()&&isLandscape()){
-    paddle1y=(mousey);
+    paddle1y=(mousey+126);
   }
   
 }
