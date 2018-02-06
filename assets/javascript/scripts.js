@@ -80,7 +80,8 @@ function handlemouse(event)
       paddle1y=(mousey-(126));
     }
   }
-  
+  var score=document.getElementById("score");
+  score.innerHTML="mousey: " + mousey;
 }
 function AutoPlayerTog()
 {
@@ -113,8 +114,8 @@ function Step()
 
   BallAI();
   Paddle2AI(); 
-  var score=document.getElementById("score");
-  score.innerHTML="score: " + myscore;
+  /*var score=document.getElementById("score");
+  score.innerHTML="score: " + myscore;*/
   var lives=document.getElementById("lives");
   lives.innerHTML="lives: " + mylives;
 
