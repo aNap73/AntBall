@@ -6,6 +6,9 @@ body{
   font-family: Orbitron, Impact, Charcoal, sans-serif;
   background-color: #000;
 }
+.maincontain {
+ position: absolute; 
+}
 .titlebar {
   background-color: green; 
   border-bottom: 2px solid greenyellow;
