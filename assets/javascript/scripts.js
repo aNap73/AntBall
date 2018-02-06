@@ -58,7 +58,8 @@ function handleTouchMove(evt) {
         return;
     }
     //mousex = evt.touches[0].clientX;                                      
-    //mousey = evt.touches[0].clientY;                          
+    //
+    mousey = evt.touches[0].clientY;                          
 };
 
 function handlemouse(event)
@@ -75,7 +76,7 @@ function handlemouse(event)
     
   }
   if (isMobile()&&isLandscape()){
-    paddle1y=(mousey-126);
+    paddle1y=(mousey-150);
   }
   
 }
