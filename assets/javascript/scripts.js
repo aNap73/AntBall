@@ -83,8 +83,7 @@ function handlemouse(event)
   
 
   
-  var score=document.getElementById("score");
-  score.innerHTML="paddle1y: " + paddle1y;
+
 }
 function AutoPlayerTog()
 {
@@ -117,8 +116,8 @@ function Step()
 
   BallAI();
   Paddle2AI(); 
-  /*var score=document.getElementById("score");
-  score.innerHTML="score: " + myscore;*/
+  var score=document.getElementById("score");
+  score.innerHTML="score: " + myscore;
   var lives=document.getElementById("lives");
   lives.innerHTML="lives: " + mylives;
 
