@@ -80,7 +80,7 @@ function handlemouse(event)
       paddle1y=(mousey-(126));
     }
   }
-  paddle1y=(mousey-(146));
+  paddle1y=(mousey-(106));
   
   var score=document.getElementById("score");
   score.innerHTML="mousey: " + mousey;
