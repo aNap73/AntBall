@@ -26,8 +26,8 @@ var cnt=0;
 
 var xDown = null;                                                        
 var yDown = null;                         
-gamecontain.addEventListener('touchstart', handleTouchStart, false);        
-gamecontain.addEventListener('touchmove', handleTouchMove, false);  
+//gamecontain.addEventListener('touchstart', handleTouchStart, false);        
+//gamecontain.addEventListener('touchmove', handleTouchMove, false);  
 function isLandscape() {
   return (window.orientation === 90 || window.orientation === -90);
 }                             
@@ -64,7 +64,7 @@ function handleTouchMove(evt) {
 
 function handlemouse(event)
 {
-  
+  event.preventDefault();
   mousex= +event.clientX;
   mousey= +event.clientY;
   
