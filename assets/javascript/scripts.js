@@ -48,18 +48,19 @@ navigator.userAgent.match(/ZuneWP7/i)
   }
   return ret;
 }
-function handleTouchStart(evt) {                                         
-   /* mousex = evt.touches[0].clientX;                                      
-   // mousey = evt.touches[0].clientY;*/                                      
+function handleTouchStart(evt) {
+  console.dir(evt);                                         
+   /*mousex = evt.touches[0].clientX;                                      
+   mousey = evt.touches[0].clientY;*/                                      
 };                                                
 
 function handleTouchMove(evt) {
     if ( ! xDown || ! yDown ) {
         return;
     }
-    /*mousex = evt.touches[0].clientX;                                   
+    mousex = evt.touches[0].clientX;                                 
     
-    mousey = evt.touches[0].clientY;*/                          
+    mousey = evt.touches[0].clientY;                          
 };
 
 function handlemouse(event)
